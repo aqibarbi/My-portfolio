@@ -1,835 +1,1693 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Muhammad Aqib Javed — Frontend Developer resume. HTML5, CSS3, JavaScript (ES6), Bootstrap, Tailwind CSS and WordPress.">
 
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <!--=============== OPEN GRAPH / SOCIAL PREVIEW ===============-->
+  <meta property="og:title" content="Muhammad Aqib Javed — Frontend Developer">
+  <meta property="og:description" content="Frontend Developer resume — HTML5, CSS3, JavaScript (ES6), Bootstrap, Tailwind CSS and WordPress.">
+  <meta property="og:image" content="https://cv-aqib-javed.netlify.app/me.webp">
+  <meta property="og:url" content="https://cv-aqib-javed.netlify.app/">
+  <meta property="og:type" content="profile">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Muhammad Aqib Javed — Frontend Developer">
+  <meta name="twitter:image" content="https://cv-aqib-javed.netlify.app/me.webp">
 
-      <!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <title>Muhammad Aqib Javed — Frontend Developer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+    html {
+      height: 100%;
+      background: #e8eef6;
+    }
 
-      <title> portfolio website </title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <div class="blob-animate">
-            
-         </div>
-         <nav class="nav container">
-            <a href="#" class="nav__logo">AJ</a>
-            <div class="nav__menu">
-               <ul class="nav__list">
-                  <li>
-                     <a href="#home" class="nav__link">Home</a>
-                  </li>
-                  <li>
-                     <a href="#about" class="nav__link">About Us</a>
-                  </li>
-                  <li>
-                     <a href="#projects" class="nav__link">Projects</a>
-                  </li>
-                  <li>
-                     <a href="#contact" class="nav__link">Contact</a>
-                  </li>
-               </ul>
+    body {
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: 13.5px;
+      color: #1d2d3e;
+      line-height: 1.6;
+      min-height: 100vh;
+      background: #e8eef6;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .resume-wrapper {
+      width: 100%;
+      max-width: 920px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 8px 40px rgba(26, 53, 88, 0.13), 0 1.5px 6px rgba(26, 53, 88, 0.07);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 255px 1fr;
+      min-height: 100%;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      background-color: #1a3558 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color: #c9ddf0;
+      padding: 36px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    .avatar-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 13px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.35);
+      background: url('me.webp') center/cover no-repeat;
+      flex-shrink: 0;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .avatar-name {
+      text-align: center;
+    }
+
+    .avatar-name h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #ffffff !important;
+      line-height: 1.25;
+    }
+
+    .avatar-name .role {
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7ca3c8 !important;
+      margin-top: 4px;
+    }
+
+    .s-group {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .s-title {
+      font-size: 9.5px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #7ca3c8 !important;
+      font-weight: 600;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .s-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .s-item .k {
+      font-size: 10px;
+      color: #7ca3c8 !important;
+    }
+
+    .s-item .v {
+      font-size: 12px;
+      color: #c9ddf0 !important;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+
+    .s-item a {
+      color: #7ec3f5 !important;
+      text-decoration: none;
+    }
+
+    .s-item a:hover {
+      text-decoration: underline;
+    }
+
+    .s-icon-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+    }
+
+    .s-icon-row svg {
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+      fill: #7ca3c8;
+      margin-top: 2px;
+    }
+
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 0;
+    }
+
+    .lang-row .ln {
+      font-size: 12.5px;
+      color: #c9ddf0 !important;
+    }
+
+    .dots-row {
+      display: flex;
+      gap: 4px;
+    }
+
+    .dot-s {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.15) !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .dot-s.on {
+      background-color: #4e8ecb !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .interest-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .chip {
+      background-color: rgba(255, 255, 255, 0.09) !important;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      padding: 3px 11px;
+      font-size: 11px;
+      color: #c9ddf0 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* ── MAIN ── */
+    .main {
+      padding: 36px 32px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      background-color: #f7f9fc !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .main-header {
+      padding-bottom: 14px;
+      border-bottom: 2.5px solid #1a3558;
+    }
+
+    .main-header h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #1a3558 !important;
+      line-height: 1.1;
+    }
+
+    .main-header .subtitle {
+      font-size: 12.5px;
+      color: #5a7494 !important;
+      margin-top: 4px;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #e6f5ee !important;
+      border: 1px solid #a8d9bb;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 11.5px;
+      color: #1a6636 !important;
+      font-weight: 500;
+      margin-top: 6px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #28a857 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.6;
+        transform: scale(0.85);
+      }
+    }
+
+    .summary-box {
+      background-color: #eaf3fc !important;
+      border-left: 3.5px solid #4e8ecb;
+      padding: 13px 16px;
+      border-radius: 0 8px 8px 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .summary-box p {
+      font-size: 13px;
+      color: #254a6e !important;
+      line-height: 1.65;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid #dce8f3;
+    }
+
+    .sec-icon-circle {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: #1a3558 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .sec-icon-circle svg {
+      fill: #ffffff !important;
+      width: 13px;
+      height: 13px;
+    }
+
+    .sec-head h3 {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #1a3558 !important;
+    }
+
+    /* Timeline */
+    .tl-item {
+      display: grid;
+      grid-template-columns: 115px 1fr;
+      gap: 12px;
+      position: relative;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: 107px;
+      top: 6px;
+      bottom: -14px;
+      width: 1px;
+      background: #dce8f3;
+    }
+
+    .tl-item:last-child::before {
+      display: none;
+    }
+
+    .tl-item::after {
+      content: '';
+      position: absolute;
+      left: 103px;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2px solid #1a3558;
+    }
+
+    .tl-date {
+      font-size: 11px;
+      color: #5a7494 !important;
+      line-height: 1.4;
+      padding-top: 2px;
+      text-align: right;
+      padding-right: 22px;
+    }
+
+    .tl-body h4 {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1d2d3e !important;
+    }
+
+    .tl-body .org {
+      font-size: 11.5px;
+      color: #2e5e9a !important;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+
+    .tl-body p {
+      font-size: 12px;
+      color: #5a7494 !important;
+      margin-top: 4px;
+      line-height: 1.55;
+    }
+
+    /* Work */
+    .work-item {
+      background-color: #ffffff !important;
+      border: 1px solid #dce8f3;
+      border-radius: 8px;
+      padding: 14px 16px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .work-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .work-top h4 {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1d2d3e !important;
+    }
+
+    .work-top .company {
+      font-size: 12px;
+      color: #2e5e9a !important;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .work-badge {
+      background-color: #d4e8f9 !important;
+      color: #1a3558 !important;
+      font-size: 10.5px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      font-weight: 500;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .work-item ul {
+      margin-top: 10px;
+      padding-left: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .work-item ul li {
+      font-size: 12px;
+      color: #5a7494 !important;
+      line-height: 1.55;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 8px;
+    }
+
+    .skill-card {
+      background-color: #ffffff !important;
+      border: 1px solid #dce8f3;
+      border-radius: 8px;
+      padding: 9px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .skill-card:hover {
+      border-color: #4e8ecb;
+      box-shadow: 0 2px 8px rgba(78, 142, 203, 0.12);
+    }
+
+    .skill-card .sn {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #1d2d3e !important;
+    }
+
+    .dots-m {
+      display: flex;
+      gap: 3px;
+    }
+
+    .dot-m {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #d3e3f0 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .dot-m.on {
+      background-color: #1a3558 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Certs */
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background-color: #ffffff !important;
+      border: 1px solid #dce8f3;
+      border-radius: 8px;
+      padding: 12px 14px;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .cert-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background-color: #d4e8f9 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .cert-icon svg {
+      fill: #1a3558 !important;
+      width: 18px;
+      height: 18px;
+    }
+
+    .cert-body h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1d2d3e !important;
+    }
+
+    .cert-body p {
+      font-size: 11.5px;
+      color: #5a7494 !important;
+      margin-top: 2px;
+    }
+
+    /* Ref */
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .ref-card {
+      background-color: #ffffff !important;
+      border: 1px solid #dce8f3;
+      border-radius: 8px;
+      padding: 13px 15px;
+    }
+
+    .ref-card h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1d2d3e !important;
+    }
+
+    .ref-card .ref-role {
+      font-size: 11.5px;
+      color: #2e5e9a !important;
+      margin-top: 2px;
+    }
+
+    .ref-card .ref-contact {
+      font-size: 11.5px;
+      color: #5a7494 !important;
+      margin-top: 6px;
+    }
+
+    /* ── DOWNLOAD FAB ── */
+    .download-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .fab-main {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #1a3558;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(26, 53, 88, 0.40);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      color: #fff;
+    }
+
+    .fab-main:hover {
+      background: #2e5e9a;
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(26, 53, 88, 0.50);
+    }
+
+    .fab-main svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+      transition: transform 0.3s;
+    }
+
+    .fab-main.open svg {
+      transform: rotate(45deg);
+    }
+
+    .fab-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+    }
+
+    .fab-options.visible {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .fab-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      border: 1px solid #dce8f3;
+      border-radius: 28px;
+      padding: 9px 16px 9px 12px;
+      cursor: pointer;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: #1a3558;
+      box-shadow: 0 3px 12px rgba(26, 53, 88, 0.14);
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .fab-option:hover {
+      background: #d4e8f9;
+      transform: translateX(-3px);
+    }
+
+    .fab-option svg {
+      width: 17px;
+      height: 17px;
+      fill: #1a3558;
+      flex-shrink: 0;
+    }
+
+    /* Loading overlay */
+    .pdf-loading {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 53, 88, 0.60);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pdf-loading.active {
+      display: flex;
+    }
+
+    .pdf-loading-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .pdf-spinner {
+      width: 42px;
+      height: 42px;
+      border: 3.5px solid #dce8f3;
+      border-top-color: #1a3558;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .pdf-loading-box p {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1a3558;
+    }
+
+    .pdf-loading-box small {
+      font-size: 11.5px;
+      color: #5a7494;
+    }
+
+    /* ── Print instruction modal ── */
+    .print-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 53, 88, 0.65);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .print-modal-overlay.active {
+      display: flex;
+    }
+
+    .print-modal {
+      background: #fff;
+      border-radius: 14px;
+      padding: 30px 32px;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 12px 50px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .print-modal h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a3558;
+    }
+
+    .print-modal>p {
+      font-size: 13px;
+      color: #5a7494;
+      line-height: 1.6;
+    }
+
+    .print-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .print-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #f7f9fc;
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #1a3558;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      font-size: 12.5px;
+      color: #1d2d3e;
+      line-height: 1.55;
+    }
+
+    .step-text strong {
+      color: #1a3558;
+      font-weight: 600;
+    }
+
+    .print-modal-btns {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .btn-print {
+      flex: 1;
+      padding: 11px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #1a3558;
+      color: #fff;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn-print:hover {
+      background: #2e5e9a;
+    }
+
+    .btn-cancel {
+      padding: 11px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #f0f4f8;
+      color: #5a7494;
+      border: 1px solid #dce8f3;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .btn-cancel:hover {
+      background: #e0e8f0;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 740px) {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+
+      .resume-wrapper {
+        grid-template-columns: 1fr;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .avatar-block {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .avatar-name {
+        text-align: left;
+      }
+
+      .main {
+        padding: 24px 18px 32px;
+      }
+
+      .tl-item {
+        grid-template-columns: 95px 1fr;
+      }
+
+      .tl-item::before {
+        left: 87px;
+      }
+
+      .tl-item::after {
+        left: 83px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .download-fab {
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tl-item {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .tl-date {
+        text-align: left;
+        padding-right: 0;
+      }
+
+      .tl-item::before,
+      .tl-item::after {
+        display: none;
+      }
+
+      .main-header h2 {
+        font-size: 24px;
+      }
+
+      .work-top {
+        flex-direction: column;
+      }
+
+      .ref-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── PRINT — forces every color exactly ── */
+    @media print {
+      @page {
+        margin: 0;
+        size: A4 portrait;
+      }
+
+      html,
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+
+      .download-fab,
+      .pdf-loading,
+      .print-modal-overlay {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        grid-template-columns: 255px 1fr !important;
+      }
+
+      .sidebar {
+        background-color: #1a3558 !important;
+      }
+
+      .avatar-name h1 {
+        color: #ffffff !important;
+      }
+
+      .s-title {
+        color: #7ca3c8 !important;
+      }
+
+      .s-item .k {
+        color: #7ca3c8 !important;
+      }
+
+      .s-item .v {
+        color: #c9ddf0 !important;
+      }
+
+      .s-icon-row svg {
+        fill: #7ca3c8 !important;
+      }
+
+      .lang-row .ln {
+        color: #c9ddf0 !important;
+      }
+
+      .dot-s {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+      }
+
+      .dot-s.on {
+        background-color: #4e8ecb !important;
+      }
+
+      .chip {
+        background-color: rgba(255, 255, 255, 0.09) !important;
+        color: #c9ddf0 !important;
+      }
+
+      .role {
+        color: #7ca3c8 !important;
+      }
+
+      .main {
+        background-color: #f7f9fc !important;
+      }
+
+      .main-header h2 {
+        color: #1a3558 !important;
+      }
+
+      .summary-box {
+        background-color: #eaf3fc !important;
+      }
+
+      .summary-box p {
+        color: #254a6e !important;
+      }
+
+      .sec-icon-circle {
+        background-color: #1a3558 !important;
+      }
+
+      .sec-icon-circle svg {
+        fill: #ffffff !important;
+      }
+
+      .sec-head h3 {
+        color: #1a3558 !important;
+      }
+
+      .work-item,
+      .skill-card,
+      .cert-item,
+      .ref-card {
+        background-color: #ffffff !important;
+      }
+
+      .work-badge {
+        background-color: #d4e8f9 !important;
+        color: #1a3558 !important;
+      }
+
+      .cert-icon {
+        background-color: #d4e8f9 !important;
+      }
+
+      .cert-icon svg {
+        fill: #1a3558 !important;
+      }
+
+      .dot-m {
+        background-color: #d3e3f0 !important;
+      }
+
+      .dot-m.on {
+        background-color: #1a3558 !important;
+      }
+
+      .availability {
+        background-color: #e6f5ee !important;
+        color: #1a6636 !important;
+      }
+
+      .pulse {
+        background-color: #28a857 !important;
+      }
+
+      .tl-body .org {
+        color: #2e5e9a !important;
+      }
+
+      .work-top .company {
+        color: #2e5e9a !important;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="resume-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="avatar-block">
+        <div class="avatar"></div>
+        <div class="avatar-name">
+          <h1>Muhammad<br>Aqib Javed</h1>
+          <div class="role">Frontend Developer</div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="s-group">
+        <div class="s-title">Contact</div>
+
+        <div class="s-item s-icon-row">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+          <div>
+            <div class="k">Phone</div>
+            <div class="v">+92 305 649 4101</div>
+            <div class="v">+92 313 661 0068</div>
+          </div>
+        </div>
+
+        <div class="s-item s-icon-row">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+          <div>
+            <div class="k">Email</div>
+            <div class="v"><a href="mailto:maqibjaved.dev@gmail.com">maqibjaved.dev@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div class="s-item s-icon-row">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          <div>
+            <div class="k">Location</div>
+            <div class="v">DHA Sector B, Road #7<br>Bahawalpur 63100, Pakistan</div>
+          </div>
+        </div>
+
+        <div class="s-item s-icon-row">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" />
+          </svg>
+          <div>
+            <div class="k">Portfolio</div>
+            <div class="v"><a href="https://portfolio-muhammad-aqibjaved.netlify.app/"
+                target="_blank">portfolio-muhammad-aqibjaved.netlify.app</a></div>
+          </div>
+        </div>
+
+        <div class="s-item s-icon-row">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+          </svg>
+          <div>
+            <div class="k">LinkedIn</div>
+            <div class="v"><a href="https://www.linkedin.com/in/muhammad-aqibjaved-webdev"
+                target="_blank">muhammad-aqibjaved-webdev</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal -->
+      <div class="s-group">
+        <div class="s-title">Personal</div>
+        <div class="s-item">
+          <div class="k">Date of birth</div>
+          <div class="v">31 July 2000</div>
+        </div>
+        <div class="s-item">
+          <div class="k">Place of birth</div>
+          <div class="v">Bahawalpur, Pakistan</div>
+        </div>
+        <div class="s-item">
+          <div class="k">Nationality</div>
+          <div class="v">Pakistani</div>
+        </div>
+        <div class="s-item">
+          <div class="k">Gender</div>
+          <div class="v">Male</div>
+        </div>
+        <!-- <div class="s-item">
+          <div class="k">Marital status</div>
+          <div class="v">Married</div>
+        </div> -->
+        <div class="s-item">
+          <div class="k">Driving license</div>
+          <div class="v">Yes<!--— Class B --></div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="s-group">
+        <div class="s-title">Languages</div>
+        <div class="lang-row">
+          <span class="ln">Urdu</span>
+          <div class="dots-row">
+            <div class="dot-s on"></div>
+            <div class="dot-s on"></div>
+            <div class="dot-s on"></div>
+            <div class="dot-s on"></div>
+            <div class="dot-s on"></div>
+          </div>
+        </div>
+        <div class="lang-row">
+          <span class="ln">English</span>
+          <div class="dots-row">
+            <div class="dot-s on"></div>
+            <div class="dot-s on"></div>
+            <div class="dot-s on"></div>
+            <div class="dot-s"></div>
+            <div class="dot-s"></div>
+          </div>
+        </div>
+        <!-- <div class="lang-row">
+          <span class="ln">Punjabi</span>
+          <div class="dots-row">
+            <div class="dot-s on"></div><div class="dot-s on"></div><div class="dot-s on"></div><div class="dot-s on"></div><div class="dot-s"></div>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Interests -->
+      <div class="s-group">
+        <div class="s-title">Interests</div>
+        <div class="interest-chips">
+          <span class="chip">Coding</span>
+          <span class="chip">Web Design</span>
+          <span class="chip">UI/UX</span>
+          <span class="chip">New Tech</span>
+          <!-- <span class="chip">Open Source</span> -->
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <div class="main-header">
+        <h2>Muhammad Aqib Javed</h2>
+        <div class="subtitle">Frontend Developer · Bahawalpur, Pakistan</div>
+        <div class="availability">
+          <span class="pulse"></span>
+          Available for opportunities
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary-box">
+        <p> Frontend Developer with hands-on skills in HTML5, CSS3, JavaScript (ES6), Bootstrap, Tailwind CSS,
+          WordPress, and responsive web design. Passionate about building user-friendly, visually appealing interfaces
+          while continuously expanding expertise in modern web technologies. Self-taught alongside a BS Commerce degree,
+          demonstrating strong initiative and adaptability.</p>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="section">
+        <div class="sec-head">
+          <div class="sec-icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 6h-2.18c.07-.44.18-.88.18-1.34A3.66 3.66 0 0 0 14.34 1c-1.3 0-2.43.69-3.07 1.71L12 3.94l-.27-.23C11.07 2.69 9.96 2 8.66 2A3.66 3.66 0 0 0 5 5.66c0 .46.11.9.18 1.34H3c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h17c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z" />
+            </svg>
+          </div>
+          <h3>Work Experience</h3>
+        </div>
+
+        <div class="work-item">
+          <div class="work-top">
+            <div>
+              <h4>Frontend Developer</h4>
+              <div class="company">SkillWays · Bahawalpur</div>
             </div>
-         </nav>
-      </header>
+            <span class="work-badge">Apr 2026 – Present</span>
+          </div>
+          <ul>
+            <li>Built a custom WordPress site from scratch for an Australian modular home company (PDS) — custom child theme, ACF-powered product catalog, and per-product finish-selection configurator.</li>
+            <li>Optimised site performance and Core Web Vitals using WP Rocket caching, image/asset fixes, and Lighthouse-driven fixes across heading structure, alt text, and touch targets.</li>
+            <li>Configured Fluent Forms with branded email notifications and FluentSMTP (Microsoft 365 OAuth) for reliable client-facing form delivery.</li>
+          </ul>
+        </div>
 
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!-- CUSTOM CURSOR -->
-         <div class="cursor"></div>
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            <div class="home__shadow"></div>
-            <div class="home__container container grid">
-               <div class="home__data">
-                  <h3 class="home__greeting">
-                     Hello, I'm
-                  </h3>
-                  <h1 class="home__name">Muhammad <br> Aqib Javed</h1>
-               </div>
-               <div class="home__image">
-                  <div class="blob-animate"></div>
-                  <img src="assets/img/home-perfil.png" alt="" class="home__perfil">
-               </div>
-               <div class="home__info">
-                  <h3 class="home__split">
-                     Creative
-                  </h3>
-                  <h2 class="home__profession-1">Web Developer</h2>
-                  <h2 class="home__profession-2"> Frontend Developer</h2>
-               </div>
-               <div class="home__social">
-                  <a href="https://linkedin.com/in/muhammad-aqibjaved-webdev" target="_blank" class="home__social-link"><i class="ri-linkedin-box-line"></i></a>
-                  <a href="https://github.com/aqibarbi" target="_blank" class="home__social-link"><i class="ri-github-line"></i></a>
-                  <!-- <a href="https://bsky.app/profile/muhammad-aqib-dev.bsky.social" target="_blank" class="home__social-link"><i class="ri-bluesky-line"></i></a> -->
-                  <!-- <a href="https://gitlab.com/maqibjaved.dev" target="_blank" class="home__social-link"><i class="ri-gitlab-line"></i></a> -->
-               </div>
-               <a href="https://cv-aqib-javed.netlify.app/" target="_blank" class="home__cv">RESUME <i class="ri-file-list-2-line"></i></a>
+        <div class="work-item">
+          <div class="work-top">
+            <div>
+              <h4>Web App Intern</h4>
+              <div class="company">FINEWEB · Bahawalpur</div>
             </div>
-            
-         </section>
+            <span class="work-badge">Aug 2024 – Apr 2026</span>
+          </div>
+          <ul>
+            <li>Assisted senior developers in building and maintaining client websites using HTML, CSS, Bootstrap,
+              Tailwind & JavaScript.</li>
+            <li>Replicated an existing client website end-to-end (design + build) under senior developer supervision.</li>
+            <li>Created responsive landing pages and improved existing designs for mobile compatibility.</li>
+            <li>Participated in code reviews and followed team coding standards and version control practices.</li>
+          </ul>
+        </div>
+      </div>
 
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            <div class="about__shadow"></div>
-            <div class="about__container container grid">
-               <div class="about__data">
-                  <h2 class="section__title"><span>Creativity</span> 
-                  <br> Is My Passion</h2>
-                  <p class="about__description">I'm a web <b>developer </b> passionate 
-                     about experimenting with new <b>skills and creativity.</b> 
-                     Driven by learning and curiosity, I'm always looking to 
-                     explore and learn new development .
-                  </p>
-                  <a href="https://cv-aqib-javed.netlify.app/" target="_blank" class="button">RESUME <i class="ri-file-list-2-line"></i></a></a>
-               </div>
-               <div class="about__image">
-                  <div class="blob-animate"></div>
-                  <div class="blob-animate"></div>
-                  <img src="assets/img/home-perfil.png" alt="" class="about__perfil">
-               </div>
+      <!-- Education -->
+      <div class="section">
+        <div class="sec-head">
+          <div class="sec-icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+            </svg>
+          </div>
+          <h3>Education</h3>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Oct 2019 –<br>Jun 2023</div>
+          <div class="tl-body">
+            <h4>Bachelor of Commerce (Bs.Com)</h4>
+            <div class="org">The Islamia University of Bahawalpur</div>
+            <p>4-year degree. Alongside formal studies, self-developed extensive frontend web development skills through
+              online courses and hands-on projects.</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">2018 – 2019</div>
+          <div class="tl-body">
+            <h4>I.Com (Intermediate)</h4>
+            <div class="org">Punjab Group of Colleges, Bahawalpur</div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">2017 – 2018</div>
+          <div class="tl-body">
+            <h4>Matriculation — Computer Science</h4>
+            <div class="org">Alpina School, Bahawalpur</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <div class="sec-head">
+          <div class="sec-icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M13 1.07V9h7c0-4.08-3.05-7.44-7-7.93zM4 15c0 4.42 3.58 8 8 8s8-3.58 8-8v-4H4v4zm7-13.93C7.05 1.56 4 4.92 4 9h7V1.07z" />
+            </svg>
+          </div>
+          <h3>Technical Skills</h3>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card"><span class="sn">HTML5</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
             </div>
-            
-         </section>
-
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-            <h2 class="section__title">
-               I Make Incredible <br>
-               <span>Projects</span>
-            </h2>
-            <div class="projects__container container grid">
-               <div class="projects__swiper swiper">
-                  <div class="swiper-wrapper">
-                     <!-- project-1  -->
-                     <article class="projects__card swiper-slide ">
-                        <div class="blob"></div>
-                        <div class="projects__number">
-                           <h1>01</h1>
-                           <h3>web</h3>
-                        </div>
-                        <div class="projects__data">
-                           <h1 class="projects__title">
-                              Real Estate <br> Website
-                           </h1>
-                           <p class="projects__subtitle">
-                              Technologies used
-                           </p>
-                           <p class="projects__description">
-                                 HTML, CSS, Bootstrap , JavaScript & Swiper Js .
-                           </p>
-                        </div>
-                        <div class="projects__image">
-                           <img src="assets/img/Real Home (clone).png" alt="project-thumbnail" class="projects__img">
-                           <a href="https://real-home-ultra-bootstrap.netlify.app/" target="_blank" class="projects__button"><i class="ri-arrow-right-up-long-line"></i></a>
-                        </div>
-                     </article>
-                     <!-- project-2  -->
-                     <article class="projects__card swiper-slide ">
-                        <div class="blob"></div>
-                        <div class="projects__number">
-                           <h1>02</h1>
-                           <h3>web</h3>
-                        </div>
-                        <div class="projects__data">
-                           <h1 class="projects__title">
-                              Real Estate <br> Website
-                           </h1>
-                           <p class="projects__subtitle">
-                              Technologies used
-                           </p>
-                           <p class="projects__description">
-                                 HTML, CSS ,bootstrap & Swiper Js .
-                           </p>
-                        </div>
-                        <div class="projects__image">
-                           <img src="assets/img/Houzez(Clone).png" alt="project-thumbnail" class="projects__img">
-                           <a href="https://houzez-bootstrap.netlify.app" target="_blank" class="projects__button"><i class="ri-arrow-right-up-long-line"></i></a>
-                        </div>
-                     </article>
-                     <!-- project-3  -->
-                     <article class="projects__card swiper-slide ">
-                        <div class="blob"></div>
-                        <div class="projects__number">
-                           <h1>03</h1>
-                           <h3>web</h3>
-                        </div>
-                        <div class="projects__data">
-                           <h1 class="projects__title">
-                              Real Estate <br> Website
-                           </h1>
-                           <p class="projects__subtitle">
-                              Technologies used
-                           </p>
-                           <p class="projects__description">
-                                 HTML & CSS .
-                           </p>
-                        </div>
-                        <div class="projects__image">
-                           <img src="assets/img/Focal Point Homes(Clone).png" alt="project-thumbnail" class="projects__img">
-                           <a href="https://focal-point-homes-flex.netlify.app" target="_blank" class="projects__button"><i class="ri-arrow-right-up-long-line"></i></a>
-                        </div>
-                     </article>
-                     <!-- project-4  -->
-                     <article class="projects__card  swiper-slide">
-                        <div class="blob"></div>
-                        <div class="projects__number">
-                           <h1>04</h1>
-                           <h3>web</h3>
-                        </div>
-                        <div class="projects__data">
-                           <h1 class="projects__title">
-                              Cv Maker <br> Website
-                           </h1>
-                           <p class="projects__subtitle">
-                              Technologies used
-                           </p>
-                           <p class="projects__description">
-                                 HTML, CSS, Vanilla JavaScript.
-                           </p>
-                        </div>
-                        <div class="projects__image">
-                           <img src="assets/img/CV Maker clone.png" alt="project-thumbnail" class="projects__img">
-                           <a href="https://cv-generator-js.netlify.app" target="_blank" class="projects__button"><i class="ri-arrow-right-up-long-line"></i></a>
-                        </div>
-                     </article>
-                     <!-- project-5  -->
-                     <article class="projects__card swiper-slide ">
-                        <div class="blob"></div>
-                        <div class="projects__number">
-                           <h1>05</h1>
-                           <h3>web</h3>
-                        </div>
-                        <div class="projects__data">
-                           <h1 class="projects__title">
-                              Metal Defence <br> Website
-                           </h1>
-                           <p class="projects__subtitle">
-                              Technologies used
-                           </p>
-                           <p class="projects__description">
-                                 HTML & CSS .
-                           </p>
-                        </div>
-                        <div class="projects__image">
-                           <img src="assets/img/Metal Defence(clone).png" alt="project-thumbnail" class="projects__img">
-                           <a href="https://mental-defend-flex.netlify.app" target="_blank" class="projects__button"><i class="ri-arrow-right-up-long-line"></i></a>
-                        </div>
-                     </article>
-                     <!-- project-6  -->
-                     <article class="projects__card swiper-slide ">
-                        <div class="blob"></div>
-                        <div class="projects__number">
-                           <h1>06</h1>
-                           <h3>web</h3>
-                        </div>
-                        <div class="projects__data">
-                           <h1 class="projects__title">
-                              CAYUGA LAKE <br> Website
-                           </h1>
-                           <p class="projects__subtitle">
-                              Technologies used
-                           </p>
-                           <p class="projects__description">
-                                 HTML & CSS .
-                           </p>
-                        </div>
-                        <div class="projects__image">
-                           <img src="assets/img/CAYUGA LAKE(clone).png" alt="project-thumbnail" class="projects__img">
-                           <a href="https://cayuga-lake-flex.netlify.app" target="_blank" class="projects__button"><i class="ri-arrow-right-up-long-line"></i></a>
-                        </div>
-                     </article>
-                     <!-- project-7  -->
-                     <article class="projects__card swiper-slide ">
-                        <div class="blob"></div>
-                        <div class="projects__number">
-                           <h1>07</h1>
-                           <h3>web</h3>
-                        </div>
-                        <div class="projects__data">
-                           <h1 class="projects__title">
-                              Anthony Medina <br> Website
-                           </h1>
-                           <p class="projects__subtitle">
-                              Technologies used
-                           </p>
-                           <p class="projects__description">
-                                 HTML & CSS .
-                           </p>
-                        </div>
-                        <div class="projects__image">
-                           <img src="assets/img/Anthony Medina(Clone).png" alt="project-thumbnail" class="projects__img">
-                           <a href="https://flex-anthony-medina.netlify.app" target="_blank" class="projects__button"><i class="ri-arrow-right-up-long-line"></i></a>
-                        </div>
-                     </article>
-                     <!-- project-8  -->
-                     <article class="projects__card swiper-slide ">
-                        <div class="blob"></div>
-                        <div class="projects__number">
-                           <h1>08</h1>
-                           <h3>web</h3>
-                        </div>
-                        <div class="projects__data">
-                           <h1 class="projects__title">
-                              Wordpress Blog<br> Website
-                           </h1>
-                           <p class="projects__subtitle">
-                              Technologies used
-                           </p>
-                           <p class="projects__description">
-                                 Elementor,Elementor Pro & custom CSS.
-                           </p>
-                        </div>
-                        <div class="projects__image">
-                           <img src="assets/img/wordpress blog website.png" alt="project-thumbnail" class="projects__img">
-                           <a href="https://staging.illuminatedgospel.org/" target="_blank" class="projects__button"><i class="ri-arrow-right-up-long-line"></i></a>
-                        </div>
-                     </article>
-                  </div>
-                  <div class="swiper-pagination"></div>
-               </div>
+          </div>
+          <div class="skill-card"><span class="sn">CSS3</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
             </div>
-         </section>
-
-         <!--==================== WORK ====================-->
-         <section class="work section">
-            <h2 class="section__title">
-               <span>My Work</span> 
-               <br> Experience
-            </h2>
-            <div class="work__container container grid">
-               <div class="work__tabs">
-                  <!-- button Exprerience -->
-                  <button class="work__button work-active" data-target="#experience">
-                     Experience <i class="ri-briefcase-3-line"></i>
-                  </button>
-                  <!-- button Education -->
-                  <button class="work__button " data-target="#education">
-                     Education <i class="ri-graduation-cap-line"></i>
-                  </button>
-               </div>
-               <div class="work__area">
-                  <div class="work__line"></div>
-                  <!-- content Experience -->
-                  <div class="work__content work-active" data-content id="experience">
-                     <div class="work__card">
-                        <div class="work__data">
-                           <div>
-                              <h1 class="work__title">
-                                 Web <br>Developer
-                              </h1>
-                              <h3 class="work__subtitle">
-                                 Learning and experimenting .
-                              </h3>
-                           </div>
-                           <h2 class="work__year">
-                              2024 
-                           </h2>
-                        </div>
-                        <p class="work__description">
-                           Learning and experimenting technologies such as HTML 5, CSS 3,Bootstrap & TailwindCSS .
-                        </p>
-                     </div>
-                     <!--  -->
-                     <div class="work__card">
-                        <div class="work__data">
-                           <div>
-                              <h1 class="work__title">
-                                 Web <br> Developer
-                              </h1>
-                              <h3 class="work__subtitle">
-                                 Learning and experimenting .
-                              </h3>
-                           </div>
-                           <h2 class="work__year">
-                              2025
-                           </h2>
-                        </div>
-                        <p class="work__description">
-                           Learning and experimenting technologies such as HTML 5, CSS 3,Bootstrap, TailwindCSS, JS(ES6) & WordPress.
-                        </p>
-                     </div>
-                     <!--  -->
-                     <div class="work__card">
-                        <div class="work__data">
-                           <div>
-                              <h1 class="work__title">
-                                 Web <br> Developer
-                              </h1>
-                              <h3 class="work__subtitle">
-                                 FreeLance.
-                              </h3>
-                           </div>
-                           <h2 class="work__year">
-                              Now
-                           </h2>
-                        </div>
-                        <p class="work__description">
-                           <!-- FreeLance web developer handling technologies such as HTML 5, CSS 3, Bootstrap & TailwindCSS, JS(ES6) & WordPress. -->
-                           Developed responsive web applications and custom websites utilizing HTML5, CSS3, Bootstrap, Tailwind CSS, JavaScript (ES6), and WordPress
-                        </p>
-                     </div>
-                  </div>
-                  <!-- content Education -->
-                  <div class="work__content " data-content id="education">
-                     <div class="work__card">
-                        <div class="work__data">
-                           <div>
-                              <h1 class="work__title">
-                                 Matric
-                                 <!-- Matriculation -->
-                              </h1>
-                              <h3 class="work__subtitle">
-                                 Computer Science
-                              </h3>
-                           </div>
-                           <h2 class="work__year">
-                              2018
-                           </h2>
-                        </div>
-                        <p class="work__description">
-                           Completed Matriculation in Computer Science from Alpina School BahawalPur.
-                        </p>
-                     </div>
-                     <!--  -->
-                     <div class="work__card">
-                        <div class="work__data">
-                           <div>
-                              <h1 class="work__title">
-                                 intermediate
-                              </h1>
-                              <h3 class="work__subtitle">
-                                 Intermediate in Commerce(I.com)
-                              </h3>
-                           </div>
-                           <h2 class="work__year">
-                              2019
-                           </h2>
-                        </div>
-                        <p class="work__description">
-                           Completed intermediate in Commerce(I.com) from Punjab College BahawalPur.
-                        </p>
-                     </div>
-                     <!--  -->
-                     <div class="work__card">
-                        <div class="work__data">
-                           <div>
-                              <h1 class="work__title">
-                                 University
-                              </h1>
-                              <h3 class="work__subtitle">
-                                 Bachelor of Commerce
-                              </h3>
-                           </div>
-                           <h2 class="work__year">
-                              <!-- Oct  -->
-                              <!-- 2019 -->
-                              <!-- - Jun  -->
-                              2023
-                           </h2>
-                        </div>
-                        <p class="work__description">
-                           Completed a 4‑year Bachelor of Commerce degree from the Islamia University of Bahawalpur. Alongside academic studies, developed an interest in web development and focused on building skills in web development.
-                        </p>
-                     </div>
-                  </div>
-               </div>
+          </div>
+          <div class="skill-card"><span class="sn">Bootstrap 5</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
             </div>
-         </section>
-
-         <!--==================== SERVICES ====================-->
-         <section class="services section">
-            <h2 class="section__title">
-               What I <span>Offer</span>
-            </h2>
-            <div class="services__container container grid">
-               <!--services Developer  -->
-               <div class="services__card services-open">
-                  <div class="blob"></div>
-                  <div class="services__data">
-                     <h2 class="services__title">
-                        Frontend Development
-                     </h2>
-                     <p class="services__description">
-                        Website creation responsive and modern  using HTML, CSS, JavaScript, and Bootstrap with clean code and smooth user experience.
-                     </p>
-                  </div>
-                  <div class="services__info">
-                     <h3 class="services__subtitle">Skills & Tools</h3>
-                     <ul class="services__skills">
-                        <li class="services__skill">
-                           HTML
-                        </li>
-                        <li class="services__skill">
-                           CSS
-                        </li>
-                        <li class="services__skill">
-                           Bootstrap
-                        </li>
-                        <li class="services__skill">
-                           TailwindCSS
-                        </li>
-                        <li class="services__skill">
-                           JavaScript(ES6)
-                        </li>
-                     </ul>
-                  </div>
-                  <button class="services__button">
-                     <i class="ri-arrow-down-s-line"></i>
-                  </button>
-               </div>
-               <!--services Developer  -->
-               <div class="services__card services-open">
-                  <div class="blob blob-2"></div>
-                  <div class="services__data">
-                     <h2 class="services__title">
-                        WordPress Development
-                     </h2>
-                     <p class="services__description">
-                        Create custom WordPress websites using Elementor, Astra, and custom layouts based on business needs.
-                     </p>
-                  </div>
-                  <div class="services__info">
-                     <h3 class="services__subtitle"></h3>
-                     <ul class="services__skills">
-                        <li class="services__skill">
-                           Elementor
-                        </li>
-                        <li class="services__skill">
-                           Elementor Pro
-                        </li>
-                        <li class="services__skill">
-                           Custom Code 
-                        </li>
-                     </ul>
-                  </div>
-                  <button class="services__button">
-                     <i class="ri-arrow-down-s-line"></i>
-                  </button>
-               </div>
+          </div>
+          <div class="skill-card"><span class="sn">Tailwind CSS</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m"></div>
             </div>
-         </section>
-
-         <!--==================== TESTIMONIALS ====================-->
-         <section class="testimonials section">
-            <h2 class="section__title"><span>What They Say</span> 
-                                       <br> About Me</h2>
-            <div class="testimonials__container container grid">.
-               <!-- testimonials card 1 -->
-               <div class="testimonials__content">
-                  <!--  -->
-                  <article class="testimonials__card">
-                     <div class="blob"></div>
-                     <div class="testimonials__data">
-                        <img src="assets/img/testimonial-1.png" alt="" class="testimonials-img">
-                        <h2 class="testimonials__name">Abex Wrooks</h2>
-                        <div class="testimonials__rating">
-                           <div class="testimonials__stars">
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                           </div>
-                           <div class="testimonials__number">5.0</div>
-                        </div>
-                        <p>
-                           The company offers many easy-to-use services, 
-                           with hard work and round-the-clock support on 
-                           all projects.
-                        </p>
-                     </div>
-                  </article>
-                  <!--  -->
-                  <article class="testimonials__card">
-                     <div class="blob"></div>
-                     <div class="testimonials__data">
-                        <img src="assets/img/testimonial-2.png" alt="" class="testimonials-img">
-                        <h2 class="testimonials__name">Willer Morth</h2>
-                        <div class="testimonials__rating">
-                           <div class="testimonials__stars">
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                           </div>
-                           <div class="testimonials__number">5.0</div>
-                        </div>
-                        <p>
-                           The company offers many easy-to-use services, 
-                           with hard work and round-the-clock support on 
-                           all projects.
-                        </p>
-                     </div>
-                  </article>
-                  <!--  -->
-                  <article class="testimonials__card">
-                     <div class="blob"></div>
-                     <div class="testimonials__data">
-                        <img src="assets/img/testimonial-3.png" alt="" class="testimonials-img">
-                        <h2 class="testimonials__name">Llemi Llorens</h2>
-                        <div class="testimonials__rating">
-                           <div class="testimonials__stars">
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                           </div>
-                           <div class="testimonials__number">5.0</div>
-                        </div>
-                        <p>
-                           The company offers many easy-to-use services, 
-                           with hard work and round-the-clock support on 
-                           all projects.
-                        </p>
-                     </div>
-                  </article>
-                  <!--  -->
-                  <article class="testimonials__card">
-                     <div class="blob"></div>
-                     <div class="testimonials__data">
-                        <img src="assets/img/testimonial-4.png" alt="" class="testimonials-img">
-                        <h2 class="testimonials__name">Jems Guiller</h2>
-                        <div class="testimonials__rating">
-                           <div class="testimonials__stars">
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                           </div>
-                           <div class="testimonials__number">5.0</div>
-                        </div>
-                        <p>
-                           The company offers many easy-to-use services, 
-                           with hard work and round-the-clock support on 
-                           all projects.
-                        </p>
-                     </div>
-                  </article>
-               </div>
-               <!-- testimonials card 2 -->
-               <div class="testimonials__content testimonials__reverse">
-                  <!--  -->
-                  <article class="testimonials__card">
-                     <div class="blob"></div>
-                     <div class="testimonials__data">
-                        <img src="assets/img/testimonial-1.png" alt="" class="testimonials-img">
-                        <h2 class="testimonials__name">Abex Wrooks</h2>
-                        <div class="testimonials__rating">
-                           <div class="testimonials__stars">
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                           </div>
-                           <div class="testimonials__number">5.0</div>
-                        </div>
-                        <p>
-                           The company offers many easy-to-use services, 
-                           with hard work and round-the-clock support on 
-                           all projects.
-                        </p>
-                     </div>
-                  </article>
-                  <!--  -->
-                  <article class="testimonials__card">
-                     <div class="blob"></div>
-                     <div class="testimonials__data">
-                        <img src="assets/img/testimonial-2.png" alt="" class="testimonials-img">
-                        <h2 class="testimonials__name">Willer Morth</h2>
-                        <div class="testimonials__rating">
-                           <div class="testimonials__stars">
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                           </div>
-                           <div class="testimonials__number">5.0</div>
-                        </div>
-                        <p>
-                           The company offers many easy-to-use services, 
-                           with hard work and round-the-clock support on 
-                           all projects.
-                        </p>
-                     </div>
-                  </article>
-                  <!--  -->
-                  <article class="testimonials__card">
-                     <div class="blob"></div>
-                     <div class="testimonials__data">
-                        <img src="assets/img/testimonial-3.png" alt="" class="testimonials-img">
-                        <h2 class="testimonials__name">Llemi Llorens</h2>
-                        <div class="testimonials__rating">
-                           <div class="testimonials__stars">
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                           </div>
-                           <div class="testimonials__number">5.0</div>
-                        </div>
-                        <p>
-                           The company offers many easy-to-use services, 
-                           with hard work and round-the-clock support on 
-                           all projects.
-                        </p>
-                     </div>
-                  </article>
-                  <!--  -->
-                  <article class="testimonials__card">
-                     <div class="blob"></div>
-                     <div class="testimonials__data">
-                        <img src="assets/img/testimonial-4.png" alt="" class="testimonials-img">
-                        <h2 class="testimonials__name">Jems Guiller</h2>
-                        <div class="testimonials__rating">
-                           <div class="testimonials__stars">
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                              <i class="ri-star-line"></i>
-                           </div>
-                           <div class="testimonials__number">5.0</div>
-                        </div>
-                        <p>
-                           The company offers many easy-to-use services, 
-                           with hard work and round-the-clock support on 
-                           all projects.
-                        </p>
-                     </div>
-                  </article>
-               </div>
+          </div>
+          <div class="skill-card"><span class="sn">JavaScript ES6</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m"></div>
             </div>
-         </section>
-
-         <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            <div class="contact__container container grid">
-               <div class="contact__data">
-                  <h2 class="section__title">
-                     Contact Me
-                  </h2>
-                  <p class="contact__description">
-                     Tell me about your next project.
-                  </p>
-                  <button class="contact__button button" id="contact-btn">
-                     Copy email <i class="ri-file-copy-line"></i>
-                     <!-- enter your email -->
-                     <span class="contact__email" id="contact-email">maqibjaved.dev@gmail.com</span>
-                  </button>
-               </div>
-               <div class="contact__content grid">
-                  <div class="contact__info grid">
-                     <div>
-                        <h3 class="contact__title">
-                           Email
-                        </h3>
-                        <address class="contact__address">
-                           maqibjaved.dev@gmail.com
-                        </address>
-                     </div>
-                     <div>
-                        <h3 class="contact__title">
-                           location
-                        </h3>
-                        <address class="contact__address">
-                           Bahawalpur,Pakistan
-                        </address>
-                     </div>
-                  </div>
-                  <div class="contact__social">
-                     <h3 class="contact__title">
-                        Social Media
-                     </h3>
-                     <div class="contact__links">
-                        <a href="https://linkedin.com/in/muhammad-aqibjaved-webdev" target="_blank" class="contact__link">
-                           Linkedin
-                           <i class="ri-arrow-right-up-long-line"></i>
-                        </a>
-
-                        <a href="https://github.com/aqibarbi" target="_blank" class="contact__link">
-                           GitHub
-                           <i class="ri-arrow-right-up-long-line"></i>
-                        </a>
-
-                        <!-- <a href="" target="_blank" class="contact__link">
-                           GitLab
-                           <i class="ri-arrow-right-up-long-line"></i>
-                        </a> -->
-
-                        <!-- <a href="" target="_blank" class="contact__link">
-                           <i class="ri-arrow-right-up-long-line"></i>
-                        </a> -->
-                     </div>
-                  </div>
-                  <div class="contact__write">
-                     <h3 class="contact__title">
-                        Write Me & We'll Talk
-                     </h3>
-                     <div class="contact__links">
-                        <a href="https://api.whatsapp.com/send?phone=3136610068&text=Hello" target="_blank" class="contact__link">
-                           WhatsApp
-                           <i class="ri-arrow-right-up-long-line"></i>
-                        </a>
-                        <!-- <a href="" target="_blank" class="contact__link">
-                           Messenger
-                           <i class="ri-arrow-right-up-long-line"></i>
-                        </a> -->
-
-                        <!-- <a href="" target="_blank" class="contact__link">
-                           Telegram
-                           <i class="ri-arrow-right-up-long-line"></i>
-                        </a> -->
-                        <!-- <a href="" target="_blank" class="contact__link">
-                           Instagram
-                           <i class="ri-arrow-right-up-long-line"></i>
-                        </a> -->
-                     </div>
-                  </div>
-               </div>
+          </div>
+          <div class="skill-card"><span class="sn">WordPress</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m"></div>
             </div>
-         </section>
-      </main>
+          </div>
+          <div class="skill-card"><span class="sn">Elementor</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m"></div>
+            </div>
+          </div>
+          <div class="skill-card"><span class="sn">Responsive Design</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+            </div>
+          </div>
+          <div class="skill-card"><span class="sn">Git &amp; GitHub</span>
+            <div class="dots-m">
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m on"></div>
+              <div class="dot-m"></div>
+              <div class="dot-m"></div>
+            </div>
+          </div>
+          <!-- <div class="skill-card"><span class="sn">Figma (Basic)</span><div class="dots-m"><div class="dot-m on"></div><div class="dot-m on"></div><div class="dot-m on"></div><div class="dot-m"></div><div class="dot-m"></div></div></div> -->
+        </div>
+      </div>
 
-      <!--==================== FOOTER ====================-->
-      <footer class="footer grid">
-         <div class="blob-animate"></div>
-         <div class="footer__copy">
-            All Rights Reserved By <span>Aj</span>
-         </div>
-         <div class="footer__year">
-            &#169; <span id="footer-year"></span>
-         </div>
-      </footer>
-      
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src="assets/js/scrollreveal.min.js"></script>
+      <!-- Certifications -->
+      <div class="section">
+        <div class="sec-head">
+          <div class="sec-icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+            </svg>
+          </div>
+          <h3>Courses &amp; Certifications</h3>
+        </div>
 
-      <!--=============== ANIME JS ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+        <div class="cert-item">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <h4>Responsive Web Design Certification</h4>
+            <p>freeCodeCamp — HTML, CSS, Flexbox &amp; Grid fundamentals</p>
+          </div>
+          <span class="work-badge"><a href="https://www.freecodecamp.org/certification/muhammad-aqibjaved-dev/responsive-web-design-v9" target="_blank"
+                style="color:#1a3558;text-decoration:none;">Live ↗</a></span>
+        </div>
 
-      <!--=============== SWIPER JS ===============-->
-      <script src="assets/js/swiper-bundle.min.js"></script>
+        <!-- <div class="cert-item">
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+        </div>
+        <div class="cert-body">
+          <h4>JavaScript Algorithms &amp; Data Structures</h4>
+          <p>freeCodeCamp — ES6, functional programming, DOM manipulation</p>
+        </div>
+      </div> -->
 
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+        <!-- <div class="cert-item">
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+        </div>
+        <div class="cert-body">
+          <h4>WordPress Development</h4>
+          <p>Udemy — Theme customisation, Elementor, WooCommerce basics</p>
+        </div>
+      </div> -->
+      </div>
+
+      <!-- Projects -->
+      <div class="section">
+        <div class="sec-head">
+          <div class="sec-icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z" />
+            </svg>
+          </div>
+          <h3>Projects</h3>
+        </div>
+
+        <div class="work-item">
+          <div class="work-top">
+            <div>
+              <h4>Perth Dynamic Solutions</h4>
+              <div class="company">WordPress · ACF · Custom Code</div>
+            </div>
+            <span class="work-badge"><a href="https://perthdynamicsolutions.com.au" target="_blank"
+                style="color:#1a3558;text-decoration:none;">Live ↗</a></span>
+          </div>
+          <ul>
+            <li>Built a custom WordPress site from scratch for an Australian modular/prefab home company — custom child theme, ACF-powered product catalog across multiple home categories, and a custom finish-selection configurator per product.</li>
+          </ul>
+        </div>
+
+        <div class="work-item">
+          <div class="work-top">
+            <div>
+              <h4>Personal Portfolio Website</h4>
+              <div class="company">HTML · CSS · JavaScript · Netlify</div>
+            </div>
+            <span class="work-badge"><a href="https://portfolio-muhammad-aqibjaved.netlify.app/" target="_blank"
+                style="color:#1a3558;text-decoration:none;">Live ↗</a></span>
+          </div>
+          <ul>
+            <li>Designed and built a fully responsive personal portfolio showcasing projects, skills, and contact
+              information.</li>
+            <li>Implemented smooth scroll animations, mobile-first layout, and cross-browser compatibility.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- References -->
+      <!-- <div class="section">
+      <div class="sec-head">
+        <div class="sec-icon-circle">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3>References</h3>
+      </div>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <h4>Available on request</h4>
+          <div class="ref-role">Academic &amp; Professional references</div>
+          <div class="ref-contact">Please contact via email or LinkedIn for reference details.</div>
+        </div>
+      </div>
+    </div> -->
+
+    </main>
+  </div>
+
+  <!-- PDF Loading Overlay -->
+  <div class="pdf-loading" id="pdfLoading">
+    <div class="pdf-loading-box">
+      <div class="pdf-spinner"></div>
+      <p>Generating PDF...</p>
+      <small>Please wait, this may take a few seconds</small>
+    </div>
+  </div>
+
+  <!-- Floating Download FAB -->
+  <div class="download-fab" id="downloadFab">
+    <div class="fab-options" id="fabOptions">
+      <a href="Muhammad-Aqib-Javed-Resume.pdf" download class="fab-option">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+        </svg>
+        Download PDF
+      </a>
+      <button class="fab-option" onclick="downloadHTML()">
+        <svg viewBox="0 0 24 24">
+          <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+        </svg>
+        Download HTML
+      </button>
+      <button class="fab-option" onclick="showPrintModal()">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z" />
+        </svg>
+        Print / Save as PDF
+      </button>
+    </div>
+    <button class="fab-main" id="fabMain" onclick="toggleFab()" title="Download Resume">
+      <svg viewBox="0 0 24 24" id="fabIcon">
+        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+      </svg>
+    </button>
+  </div>
+
+  
+
+  <!-- Print Instruction Modal -->
+  <div class="print-modal-overlay" id="printModal">
+    <div class="print-modal">
+      <h3>📄 Save Resume as PDF</h3>
+      <p>Browser print gives you <strong>perfect colors</strong> — exactly what you see on screen. Follow these steps:
+      </p>
+      <div class="print-steps">
+        <div class="print-step">
+          <div class="step-num">1</div>
+          <div class="step-text">Click <strong>"Print Resume"</strong> below — print dialog will open</div>
+        </div>
+        <div class="print-step">
+          <div class="step-num">2</div>
+          <div class="step-text">Set <strong>Destination → Save as PDF</strong></div>
+        </div>
+        <div class="print-step">
+          <div class="step-num">3</div>
+          <div class="step-text">Under <strong>More settings</strong> → enable <strong>"Background graphics"</strong> ✅
+          </div>
+        </div>
+        <div class="print-step">
+          <div class="step-num">4</div>
+          <div class="step-text">Set <strong>Margins → None</strong> &amp; <strong>Scale → 100%</strong>, then click
+            Save</div>
+        </div>
+      </div>
+      <div class="print-modal-btns">
+        <button class="btn-print" onclick="doPrint()">🖨️ Print Resume</button>
+        <button class="btn-cancel" onclick="closePrintModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+    function toggleFab() {
+      document.getElementById('fabOptions').classList.toggle('visible');
+      document.getElementById('fabMain').classList.toggle('open');
+    }
+
+    document.addEventListener('click', function (e) {
+      const fab = document.getElementById('downloadFab');
+      const modal = document.getElementById('printModal');
+      if (fab && !fab.contains(e.target)) {
+        document.getElementById('fabOptions').classList.remove('visible');
+        document.getElementById('fabMain').classList.remove('open');
+      }
+    });
+
+    function downloadHTML() {
+      const html = document.documentElement.outerHTML;
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Muhammad_Aqib_Javed_Resume.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      toggleFab();
+    }
+
+    function showPrintModal() {
+      toggleFab();
+      document.getElementById('printModal').classList.add('active');
+    }
+
+    function closePrintModal() {
+      document.getElementById('printModal').classList.remove('active');
+    }
+
+    function doPrint() {
+      closePrintModal();
+      setTimeout(() => { window.print(); }, 200);
+    }
+  </script>
+
 </html>

@@ -68,7 +68,6 @@ Netlify: `portfolio-muhammad-aqibjaved.netlify.app`
 ## Contact
 
 - Email: maqibjaved.dev@gmail.com
-- WhatsApp: https://api.whatsapp.com/send?phone=923136610068&text=Hello
 - LinkedIn: linkedin.com/in/muhammad-aqibjaved-webdev
 - GitHub: github.com/aqibarbi
 - Location: Bahawalpur, Pakistan
